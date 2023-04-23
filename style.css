@@ -15,11 +15,14 @@ Author: Myrzakan
 
 /*  ======================= Content outer ==================  */
 .content_outer {
-    margin: 7rem 515px;
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    padding: 20px 40px; 
+  position: relative;
+  top: 0;
+  right: 300px;
+  
+  margin: 7rem 515px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 20px 40px; 
 }
 
 .wp-post-image {
@@ -49,9 +52,12 @@ Author: Myrzakan
 
 
 .title_text {
-    text-decoration: none;
-    color: black;
-    
+  text-decoration: none;
+  color: black;   
+}
+
+.title_text:hover {
+  color: #007bff;
 }
 
 .post + .post {
@@ -63,23 +69,26 @@ Author: Myrzakan
 /* ========================= widget category ========================== */
 
 #sidebar {
-    max-width: 300px;
-    position: relative;
-    top: 16px;
-    bottom: 1rem;
-    left: 2rem;
-    border: 1px solid #ccc;
-    padding: 20px 25px;
-    border-radius: 6px;
+  width: 30rem;
+  height: 320px;
+  position: relative;
+  bottom: 1rem;
+  left: 2rem;
 }
 
 .sidebar_content {
   position: absolute;
-  top: 128px;
-  left: 100px;
+  left: 60rem;
+  bottom: 98.9rem;
   opacity: 0;
   transform: translateX(50px);
   animation: appear 0.5s forwards;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 35rem;
+  height: 58rem;
+  padding: 20px 0;
 }
 
 #sidebar h1 {
@@ -119,84 +128,50 @@ Author: Myrzakan
 
 .widget ul li a:hover {
   color: #007bff;
+  text-decoration: underline;
 }
 
-/* ======================== calendar sidebar ========================= */
-
-
-
-#calendar-sidebar {
- 
-  border: 1px solid #ccc;
-  padding: 20px;
-  font-size: 16px;
-}
-
-#block-11 {
+.Categories_posts {
   position: relative;
-  bottom: 28rem;
-  left: 85rem;
+  top: 150px;
+  padding: 20px 20px;
+  border-radius: 6px;
 }
 
-#wp-calendar {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  border-collapse: collapse;
+#block-7 ul li a {
+  font-size: 22px;
 }
 
-#wp-calendar th {
-  background-color: #007bff;
-  color: #fff;
+#block-9 ul li a {
   font-size: 18px;
-  font-weight: bold;
-  padding: 10px;
-  text-align: center;
-  border: 1px solid #ccc;
-}
-
-#wp-calendar td {
-  padding: 10px;
-  text-align: center;
-  border: 1px solid #ccc;
-}
-
-#wp-calendar td a {
-  color: #1f2024;
-  text-decoration: none;
 }
 
 
-#today {
-  background-color: #007bff;
-  color: #fff;
-  font-weight: bold;
-}
-
-#today a {
-  color: #fff;
-}
-
-#block-7 {
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 20px;
-
-}
 
 /* ======================= search ======================================= */
 
-.wp-block-search__inside-wrapper {
-  height: 25px;
-  width: 19rem;
-  border-radius: 2px;
-  
-} 
+
+#wp-block-search__input-1 {
+  width: 290px;
+  height: 50px;
+}
 
 .search {
   position: relative;
-  top: 10px;
-  left: 14rem;
+  top: 4rem;
+  right: 0px;
 }
+
+.br {
+  border-top: 1px solid #ccc;
+}
+
+.brr {
+  border-bottom: 1px solid #ccc;
+  position: relative;
+  top: 120px;
+}
+
 
 /* ======================= Post meta ================================= */
 
@@ -242,41 +217,42 @@ Author: Myrzakan
 
 /* ============================== Content post ============================== */
 
-/* Styles for the main content area */
-#primary {
-    max-height: 150rem;
-    max-width: 800px;
-    margin: 7rem auto;
-    padding: 20px 20px;
-    border: 1px solid #ccc;
-    border-radius: 7px;
-  }
-  
-  /* Styles for the post thumbnail */
-  .entry-thumbnail {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-  }
-  
-  /* Styles for the post title */
-  .entry-title {
-    font-size: 36px;
-    margin-bottom: 20px;
 
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 10px; 
-    margin-bottom: 20px; 
+#primary {
+  max-height: 250rem;
+  max-width: 800px;
+  margin: 7rem auto;
+  padding: 20px 20px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  }
+  
+
+  .entry-thumbnail {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  }
+  
+
+  .entry-title {
+  font-size: 36px;
+  margin-bottom: 20px;
+
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px; 
+  margin-bottom: 20px; 
         
   }
   
-  /* Styles for the post content */
+
   .entry-content {
-    font-size: 25px;
-    line-height: 1.6;
-    margin-bottom: 40px;
+  font-size: 25px;
+  line-height: 1.6;
+  margin-bottom: 40px;
   }
+
   .post-description p {
     font-size: 20px;
     line-height: 1.5;
@@ -370,6 +346,8 @@ Author: Myrzakan
     align-items: center;
     width: 100%;
     max-width: 960px;
+    position: relative;
+    right: 16rem;
   }
 
   .header_bottom h1 a{
@@ -416,6 +394,10 @@ Author: Myrzakan
   
   .menu a:hover {
     color: white;
+  }
+
+  .menu-menu-1-container ul li a {
+    font-size: 16px;
   }
   
 
@@ -575,4 +557,25 @@ Author: Myrzakan
     border-top: 1px solid #ccc;
 
     }
+
+
+    /* ============ translate ===================== */
+
+.gtranslate_wrapper {
+  display: flex;
+  position: relative;
+  left: 70rem;
+}
+
+.gtranslate_wrapper a {
+  margin: 2px 0;
+  color: #333;
+}
+
+.gtranslate_wrapper a:hover {
+  color: white;
+}
+
+
+/* ========== */
 

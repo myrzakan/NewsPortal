@@ -1,14 +1,6 @@
 <!--======= Connecting the site header to Wordpress ======-->
                 <?php get_header(); ?>
 
-    <div class="single_entries">
-      <h1>Последние записы</h1>
-    <!-- ============ single entries widget ============= -->
-    <?php if ( is_active_sidebar( 'entries-sidebar' ) ) : ?>
-        <?php dynamic_sidebar( 'entries-sidebar' ); ?>
-    <?php endif; ?>
-    </div>
-
     <div id="primary" class="content-area">
    <main id="main" class="site-main" role="main">
  

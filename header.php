@@ -16,6 +16,8 @@
 
 <header>
     <div class="header_container">
+    <?php echo do_shortcode('[gtranslate]') ?>
+           
         <div class="header_bottom">
                 <!-- ============= link to main ========================================================= -->
                 <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php the_custom_logo(); ?></a></h1>
@@ -23,16 +25,8 @@
                 <div class="header_nav_menu">
                         <!-- == header bottom == -->
                         <?php wp_nav_menu(); ?>
-                </div>
-           
+                </div>                
         </div>
-
-        <div class="search">
-                <!-- ============= widget search -------------------- -->
-                <?php if ( is_active_sidebar( 'search-sidebar' ) ) : ?>
-                    <?php dynamic_sidebar( 'search-sidebar' ); ?>
-                <?php endif; ?>
-                </div>
     </div>
 </header>
 

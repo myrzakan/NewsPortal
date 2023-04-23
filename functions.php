@@ -4,13 +4,22 @@
 //======= Function add style =======> 
 function my_theme_styles() {
     wp_enqueue_style('style-name', get_stylesheet_uri() );
+    wp_enqueue_style('adp-style', get_template_directory_uri() . '/adp.css' );
 }
+
+// ====== Connection script ===============> 
+add_action( 'wp_footer', 'addScript' );
+function addScript() {
+    wp_enqueue_script('name', get_template_directory_uri() .'/script.js');
+}
+
 
 //  ==================Add cookie ======================>
 add_action( 'wp_enqueue_scripts', 'my_theme_styles' );
 add_action( 'widgets_init', 'theme_register_sidebars' );
 add_action( 'after_setup_theme', 'theme_register' );
 add_action( 'after_setup_theme', 'myMenu' );
+
 add_theme_support( 'custom-logo' ).
 
 // ================== image size ========================>
@@ -38,18 +47,6 @@ function theme_register_sidebars() {
         )
     );
 
-    register_sidebar(
-        // ======================= widget calendar ====================>
-        array(
-            'name'          => __( 'Calendar Sidebar', 'your-theme' ),
-            'id'            => 'calendar-sidebar',
-            'description'   => __( 'Widgets in this area will be shown on the left side.', 'your-theme' ),
-            'before_widget' => '<div id="%1$s" class="widget %2$s">',
-            'after_widget'  => '</div>',
-            'before_title'  => '<h2 class="widgettitle">',
-            'after_title'   => '</h2>',
-        )
-    );
     register_sidebar(
         // ====================== widget entries =====================>
         array(
@@ -86,9 +83,9 @@ $args = array(
     'show_all'     => true, 
     'end_size'     => 1,     
     'mid_size'     => 1,    
-    'prev_next'    => false,  
-    'prev_text'    => __('« Previous'),
-    'next_text'    => __('Next »'),
+    'prev_next'    => true,  
+    'prev_text'    => __('« Назад'),
+    'next_text'    => __('Далее »'),
     'add_args'     => false, 
     'add_fragment' => '',     
     'screen_reader_text' => __( 'Posts navigation' ),
@@ -142,3 +139,4 @@ function related_posts(){
         wp_reset_postdata();
     }
 }
+
