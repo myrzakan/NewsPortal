@@ -7,6 +7,8 @@ Author: Myrzakan
 
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -79,7 +81,7 @@ Author: Myrzakan
 .sidebar_content {
   position: absolute;
   left: 60rem;
-  bottom: 98.9rem;
+  bottom: 97.1rem;
   opacity: 0;
   transform: translateX(50px);
   animation: appear 0.5s forwards;
@@ -87,8 +89,8 @@ Author: Myrzakan
   border: 1px solid #ccc;
   border-radius: 6px;
   width: 35rem;
-  height: 58rem;
-  padding: 20px 0;
+  height: 63rem;
+  padding: 30px 0;
 }
 
 #sidebar h1 {
