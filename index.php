@@ -3,12 +3,10 @@
                     <?php get_header(); ?>
 
 <body>
-<div class="content_outer">
-    <?php if(have_posts()) { ?>
         <!-- === widget category === -->
         <div class="sidebar_content">
             <aside id="sidebar">
-                <h1>Последние записы</h1>
+                <h1 class="sidebar_title">Последние записы</h1>
                 <!-- =========== add widget entries ================  -->
                 <?php if ( is_active_sidebar( 'entries-sidebar' ) ) : ?>
                     <?php dynamic_sidebar( 'entries-sidebar' ); ?>
@@ -36,8 +34,10 @@
             </aside>
         </div>
 
+<div class="content_outer">
+    <?php if(have_posts()) { ?>
         <!-- == Post output === -->
-        <?php while (have_posts()) { 
+         <?php while (have_posts()) { 
             the_post(); ?>
             <article class="post">
                 <div class="post_img">
@@ -62,14 +62,11 @@
                 </div>
             </article> <!-- post end -->
    <?php } // end if ?>
-</div>
 
         <?php } // end while ?>
+</div>
         <!-- ======== pagination ========= -->
         <?php the_posts_pagination($args); ?>
-
-      
-        </div>
 
 </body>
 

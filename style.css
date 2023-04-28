@@ -71,25 +71,27 @@ Author: Myrzakan
 /* ========================= widget category ========================== */
 
 #sidebar {
-  width: 30rem;
+  width: 20rem;
   height: 320px;
-  position: relative;
   bottom: 1rem;
+
+  position: fixed;
+  top: 0;
   left: 2rem;
 }
 
 .sidebar_content {
   position: absolute;
-  left: 60rem;
-  bottom: 97.1rem;
+  left: 75rem;
+  bottom: 117rem;
   opacity: 0;
   transform: translateX(50px);
   animation: appear 0.5s forwards;
   text-align: center;
   border: 1px solid #ccc;
   border-radius: 6px;
-  width: 35rem;
-  height: 63rem;
+  width: 24rem;
+  height: 67rem;
   padding: 30px 0;
 }
 
@@ -99,6 +101,10 @@ Author: Myrzakan
   text-align: center;
   text-transform: uppercase;
   color: #007bff;
+}
+
+.sidebar_title {
+  margin-top: 20px;
 }
 
 .widget {
@@ -221,7 +227,7 @@ Author: Myrzakan
 
 
 #primary {
-  max-height: 250rem;
+  max-height: 350rem;
   max-width: 800px;
   margin: 7rem auto;
   padding: 20px 20px;

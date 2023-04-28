@@ -80,9 +80,8 @@ function theme_register() {
 
 // ======================= Settings pagination ==================================> 
 $args = array(
-    'show_all'     => true, 
-    'end_size'     => 1,     
-    'mid_size'     => 1,    
+    'show_all'     => false,   
+    'mid_size'     => 2,    
     'prev_next'    => true,  
     'prev_text'    => __('« Назад'),
     'next_text'    => __('Далее »'),
